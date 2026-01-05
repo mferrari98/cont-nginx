@@ -3,6 +3,9 @@ nginx/ssl/*.crt
 nginx/ssl/*.key
 nginx/ssl/*.pem
 
+# Auth credentials
+.htpasswd
+
 # Logs
 *.log
 logs/
