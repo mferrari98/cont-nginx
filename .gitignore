@@ -1,7 +1,7 @@
 # Certificados SSL (archivos sensibles)
-nginx/ssl/*.crt
-nginx/ssl/*.key
-nginx/ssl/*.pem
+ssl/*.crt
+ssl/*.key
+ssl/*.pem
 
 # Auth credentials
 .htpasswd
