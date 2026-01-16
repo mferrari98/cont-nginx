@@ -1,17 +1,12 @@
-# Nginx Proxy Reverso
+# Nginx (Proxy)
 
-Servidor web Nginx configurado como proxy reverso para enrutar y gestionar el tráfico entre los diferentes servicios de la infraestructura.
+Proxy reverso para el stack de servicios. Enruta trafico HTTP/HTTPS hacia los
+contenedores internos.
 
-## ¿Qué es?
-Proxy inverso basado en Nginx Alpine que distribuye el tráfico HTTP/HTTPS entrante hacia los contenedores internos de la aplicación.
+## Configuracion
+- `conf.d/sistema-guardias.conf`: rutas y upstreams.
+- `ssl/`: certificados (self-signed o futuros).
+- `htpasswd`: usuarios para basic auth.
 
-## ¿Cómo funciona?
-- **Proxy Reverso**: Enruta peticiones a los contenedores apropiados
-- **Balanceador**: Distribuye carga entre servicios
-- **Servidor Estático**: Sirve archivos estáticos directamente
-- **Enrutamiento**:
-  - `/` → Portal de Servicios React (cont-portal:80)
-  - `/guardias/` → Sistema de Guardias Flask (cont-guardias:5000)
-  - `/static/` → Archivos estáticos del sistema de guardias
-
-Nginx escucha en los puertos 80/443 y utiliza la red interna Docker `proyectos_network` para comunicarse con los otros contenedores.
+## Logs
+Se escriben en `/var/log/nginx` (montado en `logs/nginx` en el repo principal).
