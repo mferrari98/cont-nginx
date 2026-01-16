@@ -5,6 +5,7 @@ ssl/*.pem
 
 # Auth credentials
 .htpasswd
+htpasswd
 
 # Logs
 *.log
