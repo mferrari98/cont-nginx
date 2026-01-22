@@ -9,4 +9,4 @@ contenedores internos.
 - `htpasswd`: usuarios para basic auth.
 
 ## Logs
-Se escriben en `/var/log/nginx` (montado en `logs/nginx` en el repo principal).
+Se escriben en `/var/log/nginx` (montado en `cont-nginx/logs` en el repo principal).
